@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+  // ===========================
+  // APARTAT 1 – STRINGS
+  // ===========================
+
+  // TODO: Escriu aquí el teu codi de l’apartat 1
+  let firstName = "Anna";
+  let lastName = "Garcia";
+  let welcomeMessage = `Benvinguda, ${firstName} ${lastName}!`;
+  console.log(welcomeMessage);
+  console.log(welcomeMessage.length);
+
+  let text = " JavaScript és divertit! "
+  console.log(text.trim().toUpperCase().replace("DIVERTIT", "FANTASTIC"));
+  // ===========================
+  // APARTAT 2 – ARRAYS
+  // ===========================
+
+  // TODO: Escriu aquí el teu codi de l’apartat 2
+
+    let fruits = ["Poma", "Plàtan", "Taronja", "Mango"];
+    console.log(fruits)
+
+    fruits.push("Kiwi");
+    fruits.unshift("Llimona");
+    console.log(fruits);
+
+    fruits.shift();
+    fruits.pop();
+    console.log(fruits);
+
+    let subarray = fruits.slice(1, 3);
+    console.log(subarray);
+
+    for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+    }
+
+    fruits.forEach(function(fruit) {
+    console.log(fruit.toUpperCase());
+    });
+
+  // ===========================
+  // APARTAT 3 – MÈTODES AVANÇATS D’ARRAY
+  // ===========================
+
+  // TODO: Escriu aquí el teu codi de l’apartat 3
+
+    let numbers = [4, 9, 16, 25, 29];
+    console.log(numbers);
+
+    let mayoresde18 = numbers.filter(number => number > 18);
+    console.log(mayoresde18);
+
+    let nuevoarray = numbers.map(number => number * 2);
+    console.log(nuevoarray);
+
+    console.log(numbers.some(number => number > 30))
+  // ===========================
+  // APARTAT 4 – FUNCIONS I ARROW FUNCTIONS
+  // ===========================
+
+  // TODO: Escriu aquí el teu codi de l’apartat 4
+
+    const add = (a, b) => a + b;
+    console.log(add(3,5));
+
+    const sqaure = (a) => a * a;
+    console.log(sqaure(5));
+
+    const randomNumber = () => Math.round(Math.random(0,1));
+    console.log(randomNumber());
+  // ===========================
+  // APARTAT 5 – MINI EXERCICI INTEGRADOR
+  // ===========================
+
+  // TODO: Escriu aquí el teu codi de l’apartat 5
+
+  let students = []
+
+</script>
+  
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
