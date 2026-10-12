@@ -9,8 +9,8 @@
   // ===========================
 
   // TODO: Escriu aquí el teu codi de l’apartat 1
-  let firstName = "Anna";
-  let lastName = "Garcia";
+  let firstName = "Marcos";
+  let lastName = "Gundin";
   let welcomeMessage = `Benvinguda, ${firstName} ${lastName}!`;
   console.log(welcomeMessage);
   console.log(welcomeMessage.length);
@@ -54,13 +54,22 @@
     let numbers = [4, 9, 16, 25, 29];
     console.log(numbers);
 
-    let mayoresde18 = numbers.filter(number => number > 18);
-    console.log(mayoresde18);
+    let mayoresde18 = numbers.filter(function(num) {
+        return num > 18;
+    });
 
-    let nuevoarray = numbers.map(number => number * 2);
-    console.log(nuevoarray);
 
-    console.log(numbers.some(number => number > 30))
+     let dobles = numbers.map(function(num) {
+        return num * 2;
+    });
+
+    let mayorde30 = numbers.some(function(num) {
+        return num > 30;
+    });
+
+      console.log(mayoresde18);
+      console.log(dobles);
+      console.log(mayorde30);
   // ===========================
   // APARTAT 4 – FUNCIONS I ARROW FUNCTIONS
   // ===========================
@@ -81,7 +90,13 @@
 
   // TODO: Escriu aquí el teu codi de l’apartat 5
 
-  let students = []
+  let students = ["Marcos", "Daniel", "Anas", "Alex", "Aitor"];
+  let classList = students.join(", ");
+  let shortNames = students.filter((name) => name.length < 5);
+
+        console.log(students);
+        console.log(classList);
+        console.log(shortNames);
 
 </script>
   
