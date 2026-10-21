@@ -30,60 +30,81 @@ var datosPagina = {
 
 // 2️⃣ Crear contenedor principal
 var mainContainer = document.createElement("div");
-document.body.appendChild(mainContainer);
 
 // 3️⃣ Crear encabezado principal
 var titulo = document.createElement("h1");
 titulo.innerHTML = "Mi Página Dinámica Avanzada";
-document.body.appendChild(titulo);
 titulo.style.textAlign = "center";
 titulo.style.color = "rgb(44, 62, 80)";
 
-// 4️⃣ Crear sección de introducción
 var parrafoIntro = document.createElement("p");
 parrafoIntro.innerHTML = "Esta página se genera automáticamente usando JavaScript y manipulación del DOM.";
-document.body.appendChild(parrafoIntro);
 parrafoIntro.style.fontSize = "18px";
 parrafoIntro.style.lineHeight = "1.5";
+
+// 4️⃣ Crear sección de introducción
+var introduccion = document.createElement("section");
 
 // 5️⃣ Crear secciones dinámicas
 datosPagina.secciones.forEach(seccionData => {
     var seccion = document.createElement("section");
-    document.body.appendChild(seccion);
     seccion.style.borderTop = "1px solid rgb(204, 204, 204)";
     seccion.style.marginTop = "20px";
     seccion.style.paddingTop = "10px";
 
     // Subtítulo
     var subtitulo = document.createElement("h2");
-    subtitulo.innerHTML = seccionData['subtitulo'];
-    document.body.appendChild(subtitulo);
+    subtitulo.innerHTML = seccionData.subtitulo;
+    seccion.appendChild(subtitulo);
     subtitulo.style.color = "rgb(41, 128, 185)";
 
     // Párrafo
     var parrafo = document.createElement("p");
-    parrafo.innerHTML = seccionData['parrafo'];
-    document.body.appendChild(parrafo);
-
+    parrafo.innerHTML = seccionData.parrafo;
+    seccion.appendChild(parrafo);
 
     // Lista (si existe)
     if (seccionData.lista && seccionData.lista.length > 0) {
-        var lista = document.createElement("ul");
-        document.body.appendChild(lista);
-        lista.style.paddingLeft = "20px";
+        var listadesordenada = document.createElement("ul");
+        seccion.appendChild(listadesordenada);
+        listadesordenada.style.paddingLeft = "20px";
+        for (let i = 0; i < seccionData.lista.length; i++) {
+            var lista = document.createElement("li");
+            lista.innerHTML = seccionData.lista[i];
+            seccion.appendChild(lista);
+        }
+        
+        
     }
 
     // Agregar sección al contenedor principal
+    mainContainer.appendChild(titulo);
+    mainContainer.appendChild(parrafoIntro);
+    mainContainer.appendChild(introduccion);
+
+    introduccion.appendChild(seccion);
+
+    document.body.appendChild(mainContainer);
 });
 
 // 6️⃣ Agregar imagen de ejemplo (placehold.co)
 var imagen = document.createElement("img");
+imagen.setAttribute("src", "https://placehold.co/400x200?text=DWC");
+imagen.setAttribute("alt", "Imagen de ejemplo");
+document.body.appendChild(imagen);
+imagen.style.display = "block";
+imagen.style.margin = "20px auto";
 
 // 7️⃣ Crear pie de página
 var footer = document.createElement("footer");
-
+footer.innerHTML = "© 2025 Institut Provençana";
+mainContainer.appendChild(footer);
+footer.style.textAlign = "center";
+footer.style.marginTop = "30px";
+footer.style.fontSize = "14px";
+footer.style.color = "rgb(127, 140, 141)";
 // 8️⃣ Agregar todo al body
-document.body.appendChild(mainContainer);
+document.body.appendChild(footer);
 </script>
 </body>
 
