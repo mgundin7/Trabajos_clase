@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgo=">
+<title>Pràctica Avançada DOM</title>
+<style>
+  body { font-family: Arial; margin: 20px; }
+  section { border: 2px solid #ccc; padding: 15px; margin: 15px 0; border-radius: 8px; }
+  button { margin: 5px 0; }
+  .highlight { background: yellow; }
+  .correct { color: green; font-weight: bold; }
+  .wrong { color: red; font-weight: bold; }
+  .nivell { font-size: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Pràctica DOM</h1>
+<p>Completa els exercicis i aconsegueix punts!</p>
+
+<h2>Punts totals: <span id="punts">0</span> 🏆 — <span id="nivell" class="nivell">Nivell 1: Explorador DOM</span></h2>
+
+<!-- Enunciats visibles a la pàgina -->
+<section>
+  <h2>📘 Enunciats dels exercicis DOM</h2>
+  <ol>
+    <li>Ressalta tots els elements amb classe <code>.text</code>.</li>
+    <li>Remarca visualment la zona amb ID <code>zona-exemple</code>.</li>
+    <li>Destaca l’element amb <code>name="especial"</code>.</li>
+    <li>Comprova si <code>.important</code> coincideix i troba el seu pare amb <code>.bloc</code>.</li>
+    <li>Comprova si <code>.bloc</code> conté l’element <code>name="especial"</code>.</li>
+    <li>Mostra només els elements <code>.text</code> que siguin <code>:last-child</code>.</li>
+    <li>Afegeix un nou paràgraf al bloc.</li>
+    <li>Ressalta només els paràgrafs que continguin la paraula “DOM”.</li>
+  </ol>
+</section>
+
+<!-- Zona HTML per manipular -->
+<section class="bloc" id="zona-exemple">
+  <p class="text">Primera frase de prova.</p>
+  <p class="text" name="especial">Aquesta línia és especial i conté informació sobre DOM.</p>
+  <p class="important">Element important en aquesta secció.</p>
+  <p class="text">Ultima frase de prova.</p>
+</section>
+
+
+<!-- Botons d’accions per a cada exercici -->
+<section>
+  <h2>Resol els exercicis</h2>
+  <button onclick="ex1()">Exercici 1 ✅</button>
+  <button onclick="ex2()">Exercici 2 ✅</button>
+  <button onclick="ex3()">Exercici 3 ✅</button>
+  <button onclick="">Exercici 4 ✅</button>
+  <button onclick="">Exercici 5 ✅</button>
+  <button onclick="">Exercici 6 ✅</button>
+  <button onclick="">Exercici 7 ✅</button>
+  <button onclick="">Exercici 8 ✅</button>
+
+</section>
+  <!-- Botó nou per treure estils -->
+<button onclick="netejarEstils()">🧹 Netejar destacats</button>
+
+<!-- Feedback -->
+<section id="feedback"></section>
+<script src="reptesDOM2.js"></script>
+
+</body>
+</html>
