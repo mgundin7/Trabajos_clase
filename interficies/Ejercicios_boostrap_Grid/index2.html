@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Bootstrap Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<style>
+    .box {
+        min-height: 100px;
+    }
+    .max {
+        min-height: 300;
+        background-color: grey;
+    }
+    div{
+        outline: 1px solid black;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row box">
+            <div class="col-12" style="background-color: greenyellow; text-align: center;">Header</div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-3 col-6" style="background-color: rgb(142, 170, 219); text-align: center;">1</div>
+            <div class="col-sm-3 col-6 offset-md-6" style="background-color: rgb(142, 170, 219);text-align: center;">2</div>
+            <div class="col-sm-3 col-6 offset-md-3" style="background-color: rgb(142, 170, 219); text-align: center;">3</div>
+            <div class="col-sm-3 col-6" style="background-color: rgb(142, 170, 219); text-align: center;">4</div>
+        </div>
+        <div class="row d-none d-sm-block d-md-none">
+            <div class="box col-12" style="background-color: lightblue; text-align: center;">Tablet</div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-3 col-6 order-md-4" style="background-color: grey; text-align: center;">a</div>
+            <div class="col-sm-3 col-6 order-md-3" style="background-color: grey; text-align: center;">b</div>
+            <div class="col-sm-3 col-6 order-md-2" style="background-color: grey; text-align: center;">c</div>
+            <div class="col-sm-3 col-6 order-md-1" style="background-color: grey; text-align: center;">d</div>
+        </div>
+        <div class="row d-md-block d-none">
+            <div class="box col-12" style="background-color: lightblue; text-align: center;">Desktop</div>
+        </div>
+        <div class="row d-dm-block d-block d-sm-none">
+            <div class="box col-12" style="background-color: lightblue; text-align: center;">Mobile</div>
+        </div>
+        <div class="row box">
+            <div class="col-md-3 col-sm-6 col-12 offset-md-3 d-none d-sm-block order-md-1 order-sm-2" style="background-color: orange; text-align: center;">:)</div>
+            <div class="col-md-3 col-sm-6 col-12 order-md-2 order-sm-1" style="background-color: orange; text-align: center;">:D</div>
+        </div>
+        <div class="row box">
+            <div class="col-12 d-none d-sm-block" style="background-color: greenyellow; text-align: center;">Footer</div>
+        </div>
+    </div>
+</body>
+</html>
