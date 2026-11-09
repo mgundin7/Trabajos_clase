@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="formulariUsuari">
+
+            <label>Nom:</label>
+
+            <input type="text" id="nom" required />
+
+            <label>Cognom:</label>
+
+            <input type="text" id="cognom" required />
+
+            <label>edat:</label>
+
+            <input type="number" id="edat" required />
+
+            <label>DNI:</label>
+
+            <input type="text" id="dni" required />
+
+            <fieldset>
+
+                <legend>Gènere</legend>
+
+                <label><input type="radio" name="genere" value="home"> Home</label>
+
+                <label><input type="radio" name="genere" value="dona"> Dona</label>
+
+                <label><input type="radio" name="genere" value="altres"> Altres</label>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Interessos</legend>
+
+                <label><input type="checkbox" name="interes" value="música"> Música</label>
+
+                <label><input type="checkbox" name="interes" value="esport"> Esport</label>
+
+                <label><input type="checkbox" name="interes" value="lectura"> Lectura</label>
+
+            </fieldset>
+
+            <label for="ciutat">Ciutat:</label>
+
+            <select name="ciutat">
+
+                <option value="">--Selecciona--</option>
+
+                <option value="barcelona">Barcelona</option>
+
+                <option value="girona">Girona</option>
+
+                <option value="lleida">Lleida</option>
+
+                <option value="tarragona">Tarragona</option>
+
+            </select>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
