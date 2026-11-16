@@ -13,6 +13,12 @@ const y = document.getElementById("idy");
 const fitxa1 = document.getElementById("fitxa1");
 const fitxa2 = document.getElementById("fitxa2");
 const fitxa3 = document.getElementById("fitxa3");
+
+const textoarea = document.getElementById("textoarea")
+let parrafo = document.getElementById("contador");
+
+const texto = document.getElementById("texto8");
+const numero = document.getElementById("numero8");
 //Exercici 1
 
 //OPCION 1
@@ -32,33 +38,33 @@ const fitxa3 = document.getElementById("fitxa3");
 
 //OPCION 3
 
-// nom.addEventListener("change",()=> {
-// if (/[0-9]/.test(nom.value)) {
-//     alert("Hay numeros");
-// }
-// });
+nom.addEventListener("change", () => {
+    if (/[0-9]/.test(nom.value)) {
+        alert("Hay numeros");
+    }
+});
 
 //Exercici 1 -BIS
-// nom.addEventListener("keydown", (event)=> {
-//     console.log(event.key);
-//     if (!isNaN(event.key)) {
-//         event.preventDefault();
-//     }
-// });
+nom.addEventListener("keydown", (event) => {
+    console.log(event.key);
+    if (!isNaN(event.key)) {
+        event.preventDefault();
+    }
+});
 
-// //EXERCICI 2
-// repeat.addEventListener("paste", (event)=> {
-//     event.preventDefault();
-//     alert("No puedes pegar aquí, vago")
-// });
+//EXERCICI 2
+repeat.addEventListener("paste", (event) => {
+    event.preventDefault();
+    alert("No puedes pegar aquí, vago")
+});
 
 //Exercici 3
 document.addEventListener("DOMContentLoaded", () => {
-    colores.addEventListener("mouseover", ()=> {
-        colores.style.backgroundColor="red";
+    colores.addEventListener("mouseover", () => {
+        colores.style.backgroundColor = "red";
     });
-    colores.addEventListener("mouseout", ()=> {
-        colores.style.backgroundColor="white";
+    colores.addEventListener("mouseout", () => {
+        colores.style.backgroundColor = "white";
     });
 });
 
@@ -89,4 +95,37 @@ document.addEventListener("keypress", (event) => {
     else if (event.key == 3) {
         fitxa3.className = "visible";
     }
+});
+
+textoarea.addEventListener("input", () => {
+    let contador = textoarea.value.length;
+    parrafo.textContent = "Numero de caracteres: " + contador;
+});
+
+[texto, numero].forEach((campo) => {
+    campo.addEventListener("focus", () => {
+        campo.style.backgroundColor = "lightblue";
+        campo.style.fontFamily = "Arial";
+        campo.style.fontSize = "18px";
+    });
+
+    campo.addEventListener("blur", () => {
+        campo.style.backgroundColor = "";
+        campo.style.fontFamily = "";
+        campo.style.fontSize = "";
+    });
+});
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.ctrlKey && event.key === "s") {
+        event.preventDefault();
+        alert("Guardat!");
+    }
+
+    if (event.shiftKey && event.key.toLowerCase() === "l") {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+    }
+
 });
